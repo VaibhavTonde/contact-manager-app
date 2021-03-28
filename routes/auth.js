@@ -12,4 +12,4 @@ router.get('/',authController.getLoggedInUser);
 // @access  Public
 router.post('/',authController.getUser);
 
-module.exports = router;
+module.exports = router;   
