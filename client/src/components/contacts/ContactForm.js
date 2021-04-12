@@ -52,10 +52,10 @@ const ContactForm = () => {
     return (
         <form onSubmit = {onSubmitHandler}>
             <h2 className="text-primary">{current ? 'Edit' : 'Add'} Contact</h2>
-            <input type="text" placeholder="Name" name="name" value={name} onChange={onChangeHandler}/>
-            <input type="email" placeholder="Email" name="email" value={email} onChange={onChangeHandler}/>
-            <input type="text" placeholder="Country Code" name="callingCode" value={callingCode} onChange={onChangeHandler}/>
-            <input type="text" placeholder="Phone Number" name="phoneNumber" value={phoneNumber} onChange={onChangeHandler}/>
+            <input type="text" placeholder="Name" name="name" value={name} onChange={onChangeHandler} required/>
+            <input type="email" placeholder="Email" name="email" value={email} onChange={onChangeHandler} required/>
+            <input type="text" placeholder="Country Code" name="callingCode" value={callingCode} onChange={onChangeHandler} required minLength='1' maxLength='3'/>
+            <input type="text" placeholder="Phone Number" name="phoneNumber" value={phoneNumber} onChange={onChangeHandler} required minLength='10' maxLength='10'/>
             <h5>Contact Type</h5>
             <input type="radio" name="type" value="Personal" checked={type === 'Personal'} onChange={onChangeHandler}/>Personal{' '}
             <input type="radio" name="type" value="Professional" checked={type === 'Professional'} onChange={onChangeHandler}/>Professional{' '}
