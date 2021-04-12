@@ -12,7 +12,7 @@ const ContactFilter = () => {
             text.current.value = '';
         }
         //eslint-disable-next-line
-    }, [])
+    })
     
     const onChangeHandler = (e) => {
         if(text.current.value !== ''){
